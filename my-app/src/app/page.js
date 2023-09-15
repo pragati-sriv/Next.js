@@ -1,14 +1,23 @@
 'use client'
+import Link from 'next/link'
 import styles from './page.module.css'
-import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  const[name,setName]=useState("pragati")
+  const router = useRouter();
   return (
     <main className={styles.main}>
-       {/* <h1>Event Function And state</h1>
-       <h2>{name}</h2>
-       <button onClick={()=>setName("shikha")}>Click Me</button> */}
+      <h2>Basic Routing | Make New Page</h2>
+      <br/>
+      <Link href="/login">Go to Login Page</Link>
+      <br/>
+      <Link href="/about">Go to About Page</Link>
+      <br/>
+      <br/>
+      <button onClick={()=>router.push("/login")}>Go Login</button>
+      <br/>
+      <br/>
+      <button  onClick={()=>router.push("/about")}>Go About</button>
     </main>
   )
 }
