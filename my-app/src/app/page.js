@@ -6,9 +6,9 @@ export default function Home() {
   const[name,setName]=useState("pragati")
   return (
     <main className={styles.main}>
-       <h1>Event Function And state</h1>
+       {/* <h1>Event Function And state</h1>
        <h2>{name}</h2>
-       <button onClick={()=>setName("shikha")}>Click Me</button>
+       <button onClick={()=>setName("shikha")}>Click Me</button> */}
     </main>
   )
 }
